@@ -5,6 +5,8 @@ use App\Http\Controllers\DosenController;
 use App\Http\Controllers\PegawaiController;
 use App\Http\Controllers\pegawaiDBController;
 use App\Http\Controllers\BlogController;
+use App\Http\Controllers\NilaikuliahController;
+
 
 // GENERAL
 Route::get('/', function () {
@@ -32,6 +34,11 @@ Route::get('/pegawai/cari', [pegawaiDBController::class, 'cari']);
 Route::get('/pegawai/{nama}', [PegawaiController::class, 'index']);
 Route::get('/formulir', [PegawaiController::class, 'formulir']);
 Route::post('/formulir/proses', [PegawaiController::class, 'proses']);
+
+
+Route::get('/nilaikuliah', [NilaikuliahController::class, 'index']);
+Route::get('/nilaikuliah/tambah', [NilaikuliahController::class, 'tambah']);
+Route::post('/nilaikuliah/store', [NilaikuliahController::class, 'store']);
 
 // BLOG
 Route::get('/blog', [BlogController::class, 'home']);
