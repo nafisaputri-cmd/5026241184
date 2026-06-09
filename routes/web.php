@@ -5,6 +5,7 @@ use App\Http\Controllers\DosenController;
 use App\Http\Controllers\PegawaiController;
 use App\Http\Controllers\pegawaiDBController;
 use App\Http\Controllers\BlogController;
+use App\Http\Controllers\LampuController;
 use App\Http\Controllers\NilaikuliahController;
 use App\Http\Controllers\KeranjangBelanjaController;
 
@@ -35,6 +36,14 @@ Route::get('/pegawai/cari', [pegawaiDBController::class, 'cari']);
 Route::get('/pegawai/{nama}', [PegawaiController::class, 'index']);
 Route::get('/formulir', [PegawaiController::class, 'formulir']);
 Route::post('/formulir/proses', [PegawaiController::class, 'proses']);
+
+//lampu
+Route::get('/lampu', [LampuController::class, 'index'])->name('lampu.index');
+Route::get('/lampu/tambah', [LampuController::class, 'create'])->name('lampu.create');
+Route::post('/lampu/simpan', [LampuController::class, 'store'])->name('lampu.store');
+Route::get('/lampu/edit/{id}', [LampuController::class, 'edit'])->name('lampu.edit');
+Route::put('/lampu/update/{id}', [LampuController::class, 'update'])->name('lampu.update');
+Route::delete('/lampu/hapus/{id}', [LampuController::class, 'destroy'])->name('lampu.destroy');
 
 //nilaikuliah
 Route::get('/nilaikuliah', [NilaikuliahController::class, 'index']);

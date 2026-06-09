@@ -13,17 +13,17 @@
 
     <div class="container">
         <div class="mt-4 p-5 bg-primary text-white rounded">
-            <h3>5026241184 - Nafisa Putri Az Zahroh</h3>
+            <h3>5026241184 - Nafisa Putri Az Zahro</h3>
             <h6>@yield('title')</h6>
         </div>
         <nav class="navbar navbar-expand-sm bg-light navbar-light">
             <div class="container-fluid">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link active" href="/pegawai">Pegawai</a>
+                        <a class="nav-link" href="/pegawai">Pegawai</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/lampu">PR 1</a>
+                        <a class="nav-link active" href="/lampu">PR 1</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="/nilaikuliah">PR 2</a>
