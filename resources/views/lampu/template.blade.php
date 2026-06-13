@@ -13,7 +13,7 @@
 
     <div class="container">
         <div class="mt-4 p-5 bg-primary text-white rounded">
-            <h3>5026241184 - Nafisa Putri Az Zahro</h3>
+            <h3>5026241184 - Nafisa Putri Az Zahroh</h3>
             <h6>@yield('title')</h6>
         </div>
         <nav class="navbar navbar-expand-sm bg-light navbar-light">

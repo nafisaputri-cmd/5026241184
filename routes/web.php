@@ -8,6 +8,7 @@ use App\Http\Controllers\BlogController;
 use App\Http\Controllers\LampuController;
 use App\Http\Controllers\NilaikuliahController;
 use App\Http\Controllers\KeranjangBelanjaController;
+use App\Http\Controllers\SiswaController;
 
 
 // GENERAL
@@ -37,7 +38,7 @@ Route::get('/pegawai/{nama}', [PegawaiController::class, 'index']);
 Route::get('/formulir', [PegawaiController::class, 'formulir']);
 Route::post('/formulir/proses', [PegawaiController::class, 'proses']);
 
-//lampu
+//Route CRUD lampu
 Route::get('/lampu', [LampuController::class, 'index'])->name('lampu.index');
 Route::get('/lampu/tambah', [LampuController::class, 'create'])->name('lampu.create');
 Route::post('/lampu/simpan', [LampuController::class, 'store'])->name('lampu.store');
@@ -45,16 +46,25 @@ Route::get('/lampu/edit/{id}', [LampuController::class, 'edit'])->name('lampu.ed
 Route::put('/lampu/update/{id}', [LampuController::class, 'update'])->name('lampu.update');
 Route::delete('/lampu/hapus/{id}', [LampuController::class, 'destroy'])->name('lampu.destroy');
 
-//nilaikuliah
+//Route CRUD nilaikuliah
 Route::get('/nilaikuliah', [NilaikuliahController::class, 'index']);
 Route::get('/nilaikuliah/tambah', [NilaikuliahController::class, 'tambah']);
 Route::post('/nilaikuliah/store', [NilaikuliahController::class, 'store']);
 
-//keranjang
+//Route CRUD keranjang
 Route::get('/keranjang', [KeranjangBelanjaController::class, 'index'])->name('keranjang.index');
 Route::get('/keranjang/tambah', [KeranjangBelanjaController::class, 'create'])->name('keranjang.create');
 Route::post('/keranjang/simpan', [KeranjangBelanjaController::class, 'store'])->name('keranjang.store');
 Route::delete('/keranjang/hapus/{id}', [KeranjangBelanjaController::class, 'destroy'])->name('keranjang.destroy');
+
+//Route CRUD Siswa
+Route::get('/siswa', [SiswaController::class, 'index'])->name('siswa.index');
+Route::get('/siswa/create', [SiswaController::class, 'create'])->name('siswa.create');
+Route::post('/siswa', [SiswaController::class, 'store'])->name('siswa.store');
+Route::get('/siswa/{nrp}/edit', [SiswaController::class, 'edit'])->name('siswa.edit');
+Route::put('/siswa/{nrp}', [SiswaController::class, 'update'])->name('siswa.update');
+Route::delete('/siswa/{nrp}', [SiswaController::class, 'destroy'])->name('siswa.destroy');
+
 
 // BLOG
 Route::get('/blog', [BlogController::class, 'home']);
