@@ -23,10 +23,10 @@
                         <a class="nav-link" href="/pegawai">Pegawai</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/siswa">Siswa</a>
+                        <a class="nav-link active" href="/siswa">Siswa</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" href="/lampu">PR 1</a>
+                        <a class="nav-link" href="/lampu">PR 1</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="/nilaikuliah">PR 2</a>

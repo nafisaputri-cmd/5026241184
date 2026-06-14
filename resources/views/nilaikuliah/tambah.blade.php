@@ -6,7 +6,7 @@
 
     <div class="card">
         <div class="card-header">
-            Form Tambah Data Nilai Kuliah
+            Formulir Tambah Data Nilai Kuliah
         </div>
         <div class="card-body">
             <form action="/nilaikuliah/store" method="post">

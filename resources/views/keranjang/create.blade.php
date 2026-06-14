@@ -4,7 +4,7 @@
 
 @section('konten')
     <div class="mt-3">
-        <h4>Tambah Data Belanja</h4>
+        <h4>Tambahkan Data Belanja</h4>
 
         <form action="{{ route('keranjang.store') }}" method="POST">
             @csrf

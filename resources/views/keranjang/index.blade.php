@@ -11,7 +11,7 @@
                 <tr>
                     <th>Kode Pembelian</th>
                     <th>Kode Barang</th>
-                    <th>Jumlah Pembelian</th>
+                    <th>Jumlah Barang</th>
                     <th>Harga per Item</th>
                     <th>Total</th>
                     <th>Action</th>

@@ -4,7 +4,7 @@
 
 @section('konten')
     <div class="mt-3">
-        <h4>Edit Data Lampu</h4>
+        <h4>Edit Data</h4>
 
         <form action="{{ route('lampu.update', $item->kodelampu) }}" method="POST">
             @csrf

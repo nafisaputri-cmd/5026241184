@@ -11,7 +11,7 @@
                 <th>NRP</th>
                 <th>Nilai Angka</th>
                 <th>SKS</th>
-                <th>Nilai Huruf</th>
+                <th>Nilai (Huruf)</th>
                 <th>Bobot</th>
             </tr>
         </thead>

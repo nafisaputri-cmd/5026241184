@@ -2,7 +2,7 @@
 @section('title', 'Data Pegawai')
 @section('konten')
 
-    <h2>Edit Siswa</h2>
+    <h2>Edit Data Siswa</h2>
 
     @if ($errors->any())
         <ul style="color: red;">

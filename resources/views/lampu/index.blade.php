@@ -4,7 +4,7 @@
 
 @section('konten')
     <div class="mt-3">
-        <a href="{{ route('lampu.create') }}" class="btn btn-primary mb-3">+ Tambah Data</a>
+        <a href="{{ route('lampu.create') }}" class="btn btn-primary mb-3">+ Tambahkan Data</a>
 
         <table class="table table-bordered table-striped">
             <thead class="table-dark">
