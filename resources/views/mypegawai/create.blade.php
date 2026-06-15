@@ -12,7 +12,7 @@
         </ul>
     @endif
 
-    <form action="{{ route('eas.store') }}" method="POST" onsubmit="return validasiForm()">
+    <form action="{{ route('eas.store') }}" method="POST" id="formTambah">
         @csrf
 
         <div class="row mb-3">
@@ -49,7 +49,7 @@
 
         <div class="row">
             <div class="col-sm-9 offset-sm-3">
-                <button type="submit" class="btn btn-success">Simpan</button>
+                <button type="button" onclick="validasiForm()" class="btn btn-success">Simpan</button>
                 <a href="{{ route('eas.index') }}" class="btn btn-secondary">Kembali</a>
             </div>
         </div>
@@ -64,25 +64,25 @@
 
             if (kode === '') {
                 Swal.fire({ title: 'Kesalahan!', text: 'Kode Pegawai wajib diisi.', icon: 'error' });
-                return false;
+                return;
             }
 
             if (!/^[a-zA-Z0-9]+$/.test(kode)) {
                 Swal.fire({ title: 'Kesalahan!', text: 'Kode Pegawai hanya boleh huruf dan angka.', icon: 'error' });
-                return false;
+                return;
             }
 
             if (nama === '') {
                 Swal.fire({ title: 'Kesalahan!', text: 'Nama Lengkap wajib diisi.', icon: 'error' });
-                return false;
+                return;
             }
 
             if (!/^[a-zA-Z\s]+$/.test(nama)) {
                 Swal.fire({ title: 'Kesalahan!', text: 'Nama Lengkap hanya boleh huruf.', icon: 'error' });
-                return false;
+                return;
             }
 
-            return true;
+            document.getElementById('formTambah').submit();
         }
     </script>
 @endsection

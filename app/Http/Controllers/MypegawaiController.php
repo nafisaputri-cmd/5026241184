@@ -20,24 +20,23 @@ class MypegawaiController extends Controller
     }
 
     public function store(Request $request)
-    {
-        $request->validate([
-            'kodepegawai' => 'required|string|max:10|unique:mypegawai,kodepegawai',
-            'namaplengkap' => 'required|string|max:50',
-            'divisi' => 'required|string|max:20',
-            'departemen' => 'required|numeric',
-        ]);
+{
+    $request->validate([
+        'kodepegawai' => 'required|string|max:9|unique:mypegawai,kodepegawai',
+        'namalengkap' => 'required|string|max:50',
+        'divisi'      => 'nullable|string|max:5',
+        'departemen'  => 'nullable|string|max:10',
+    ]);
 
-        DB::table('mypegawai')->insert([
-            'kodepegawai' => $request->kodepegawai,
-            'namalengkap' => $request->namalengkap,
-            'divisi' => $request->divisi,
-            'departemen' => $request->departemen,
-        ]);
+    DB::table('mypegawai')->insert([
+        'kodepegawai' => $request->kodepegawai,
+        'namalengkap' => $request->namalengkap,
+        'divisi'      => $request->divisi ?: null,
+        'departemen'  => $request->departemen ?: null,
+    ]);
 
-        return redirect()->route('eas.index')->with('success', 'Data pegawai berhasil ditambahkan.');
-    }
-
+    return redirect()->route('eas.index')->with('success', 'Data pegawai berhasil ditambahkan.');
+}
     public function view($kodepegawai)
     {
         $pegawai = DB::table('mypegawai')->where('kodepegawai', $kodepegawai)->first();

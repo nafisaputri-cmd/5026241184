@@ -35,7 +35,7 @@
                         <a class="nav-link" href="/keranjang">PR 3</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" href="#">EAS</a>
+                        <a class="nav-link active" href="/eas">EAS</a>
                     </li>
                 </ul>
             </div>

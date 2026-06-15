@@ -9,6 +9,7 @@ use App\Http\Controllers\LampuController;
 use App\Http\Controllers\NilaikuliahController;
 use App\Http\Controllers\KeranjangBelanjaController;
 use App\Http\Controllers\SiswaController;
+use App\Http\Controllers\MypegawaiController;
 
 
 // GENERAL
@@ -83,9 +84,8 @@ Route::get('/pertemuan4-5026241184', function () { return view('pertemuan4-50262
 Route::get('/pertemuan5-dell', function () { return view('pertemuan5-dell'); });
 Route::get('/pertemuan5-simply', function () { return view('pertemuan5-simply'); });
 
-
-/Route CRUD keranjang
+// Route UAS - mypegawai
 Route::get('/eas', [MypegawaiController::class, 'index'])->name('eas.index');
 Route::get('/eas/create', [MypegawaiController::class, 'create'])->name('eas.create');
 Route::post('/eas', [MypegawaiController::class, 'store'])->name('eas.store');
-Route::delete('/eas/{kodepegawai}', [MypegawaiController::class, 'view'])->name('eas.view');
+Route::get('/eas/{kodepegawai}', [MypegawaiController::class, 'view'])->name('eas.view');
