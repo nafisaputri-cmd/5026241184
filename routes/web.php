@@ -65,7 +65,6 @@ Route::get('/siswa/{nrp}/edit', [SiswaController::class, 'edit'])->name('siswa.e
 Route::put('/siswa/{nrp}', [SiswaController::class, 'update'])->name('siswa.update');
 Route::delete('/siswa/{nrp}', [SiswaController::class, 'destroy'])->name('siswa.destroy');
 
-
 // BLOG
 Route::get('/blog', [BlogController::class, 'home']);
 Route::get('/blog/tentang', [BlogController::class, 'tentang']);
@@ -83,3 +82,10 @@ Route::get('/pertemuan3-nyamnyam', function () { return view('pertemuan3-nyamnya
 Route::get('/pertemuan4-5026241184', function () { return view('pertemuan4-5026241184'); });
 Route::get('/pertemuan5-dell', function () { return view('pertemuan5-dell'); });
 Route::get('/pertemuan5-simply', function () { return view('pertemuan5-simply'); });
+
+
+/Route CRUD keranjang
+Route::get('/eas', [MypegawaiController::class, 'index'])->name('eas.index');
+Route::get('/eas/create', [MypegawaiController::class, 'create'])->name('eas.create');
+Route::post('/eas', [MypegawaiController::class, 'store'])->name('eas.store');
+Route::delete('/eas/{kodepegawai}', [MypegawaiController::class, 'view'])->name('eas.view');
